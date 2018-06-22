@@ -15,6 +15,9 @@
 		A7217E1520CA1DF0009CE0AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7217E1420CA1DF0009CE0AB /* main.m */; };
 		A7217E1F20CA1DF0009CE0AB /* ProtocolBufferTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7217E1E20CA1DF0009CE0AB /* ProtocolBufferTestTests.m */; };
 		A7217E2A20CA1DF0009CE0AB /* ProtocolBufferTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7217E2920CA1DF0009CE0AB /* ProtocolBufferTestUITests.m */; };
+		A7217E4820CA1E60009CE0AB /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7217E4020CA1E51009CE0AB /* libProtocolBuffers.a */; };
+		A7217E4C20CA22EC009CE0AB /* Person.proto in Resources */ = {isa = PBXBuildFile; fileRef = A7217E4B20CA22EC009CE0AB /* Person.proto */; };
+		A7217E4F20CA244D009CE0AB /* Person.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = A7217E4E20CA244C009CE0AB /* Person.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = A7217E0120CA1DEE009CE0AB;
 			remoteInfo = ProtocolBufferTest;
+		};
+		A7217E3F20CA1E51009CE0AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7461B52E0F94FAF800A0C422;
+			remoteInfo = ProtocolBuffers;
+		};
+		A7217E4120CA1E51009CE0AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BBEA4A6147C727100C4ADB7;
+			remoteInfo = UnitTests;
+		};
+		A7217E4320CA1E51009CE0AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9A5EA51831993600A9D33B;
+			remoteInfo = iOSTestHarness;
+		};
+		A7217E4520CA1E51009CE0AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4487C6E1A9F8F8100531423;
+			remoteInfo = TestSingleSourceBuild;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +82,10 @@
 		A7217E2520CA1DF0009CE0AB /* ProtocolBufferTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolBufferTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7217E2920CA1DF0009CE0AB /* ProtocolBufferTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolBufferTestUITests.m; sourceTree = "<group>"; };
 		A7217E2B20CA1DF0009CE0AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = objectivec/ProtocolBuffers_iOS.xcodeproj; sourceTree = "<group>"; };
+		A7217E4B20CA22EC009CE0AB /* Person.proto */ = {isa = PBXFileReference; lastKnownFileType = text; path = Person.proto; sourceTree = "<group>"; };
+		A7217E4D20CA244C009CE0AB /* Person.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.pbobjc.h; sourceTree = "<group>"; };
+		A7217E4E20CA244C009CE0AB /* Person.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.pbobjc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7217E4820CA1E60009CE0AB /* libProtocolBuffers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +121,7 @@
 				A7217E1D20CA1DF0009CE0AB /* ProtocolBufferTestTests */,
 				A7217E2820CA1DF0009CE0AB /* ProtocolBufferTestUITests */,
 				A7217E0320CA1DEE009CE0AB /* Products */,
+				A7217E4720CA1E60009CE0AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +138,12 @@
 		A7217E0420CA1DEE009CE0AB /* ProtocolBufferTest */ = {
 			isa = PBXGroup;
 			children = (
+				A7217E4920CA1EE6009CE0AB /* PbTest */,
 				A7217E0520CA1DEE009CE0AB /* AppDelegate.h */,
 				A7217E0620CA1DEE009CE0AB /* AppDelegate.m */,
 				A7217E0820CA1DEE009CE0AB /* ViewController.h */,
 				A7217E0920CA1DEE009CE0AB /* ViewController.m */,
+				A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */,
 				A7217E0B20CA1DEE009CE0AB /* Main.storyboard */,
 				A7217E0E20CA1DF0009CE0AB /* Assets.xcassets */,
 				A7217E1020CA1DF0009CE0AB /* LaunchScreen.storyboard */,
@@ -130,6 +169,34 @@
 				A7217E2B20CA1DF0009CE0AB /* Info.plist */,
 			);
 			path = ProtocolBufferTestUITests;
+			sourceTree = "<group>";
+		};
+		A7217E3820CA1E51009CE0AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7217E4020CA1E51009CE0AB /* libProtocolBuffers.a */,
+				A7217E4220CA1E51009CE0AB /* UnitTests.xctest */,
+				A7217E4420CA1E51009CE0AB /* iOSTestHarness.app */,
+				A7217E4620CA1E51009CE0AB /* libTestSingleSourceBuild.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7217E4720CA1E60009CE0AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7217E4920CA1EE6009CE0AB /* PbTest */ = {
+			isa = PBXGroup;
+			children = (
+				A7217E4D20CA244C009CE0AB /* Person.pbobjc.h */,
+				A7217E4E20CA244C009CE0AB /* Person.pbobjc.m */,
+				A7217E4B20CA22EC009CE0AB /* Person.proto */,
+			);
+			path = PbTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +288,12 @@
 			mainGroup = A7217DF920CA1DEE009CE0AB;
 			productRefGroup = A7217E0320CA1DEE009CE0AB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A7217E3820CA1E51009CE0AB /* Products */;
+					ProjectRef = A7217E3720CA1E51009CE0AB /* ProtocolBuffers_iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A7217E0120CA1DEE009CE0AB /* ProtocolBufferTest */,
@@ -230,12 +303,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A7217E4020CA1E51009CE0AB /* libProtocolBuffers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libProtocolBuffers.a;
+			remoteRef = A7217E3F20CA1E51009CE0AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7217E4220CA1E51009CE0AB /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = A7217E4120CA1E51009CE0AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7217E4420CA1E51009CE0AB /* iOSTestHarness.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSTestHarness.app;
+			remoteRef = A7217E4320CA1E51009CE0AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7217E4620CA1E51009CE0AB /* libTestSingleSourceBuild.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTestSingleSourceBuild.a;
+			remoteRef = A7217E4520CA1E51009CE0AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A7217E0020CA1DEE009CE0AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A7217E1220CA1DF0009CE0AB /* LaunchScreen.storyboard in Resources */,
+				A7217E4C20CA22EC009CE0AB /* Person.proto in Resources */,
 				A7217E0F20CA1DF0009CE0AB /* Assets.xcassets in Resources */,
 				A7217E0D20CA1DEE009CE0AB /* Main.storyboard in Resources */,
 			);
@@ -265,6 +370,7 @@
 				A7217E0A20CA1DEE009CE0AB /* ViewController.m in Sources */,
 				A7217E1520CA1DF0009CE0AB /* main.m in Sources */,
 				A7217E0720CA1DEE009CE0AB /* AppDelegate.m in Sources */,
+				A7217E4F20CA244D009CE0AB /* Person.pbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9HR3C854V;
+				HEADER_SEARCH_PATHS = "$(PROJECT)/objectivec";
 				INFOPLIST_FILE = ProtocolBufferTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9HR3C854V;
+				HEADER_SEARCH_PATHS = "$(PROJECT)/objectivec";
 				INFOPLIST_FILE = ProtocolBufferTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
